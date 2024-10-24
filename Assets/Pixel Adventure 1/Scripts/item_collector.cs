@@ -224,10 +224,22 @@ public class item_collector : MonoBehaviour
     // 丢弃物品按钮点击事件
     public void OnDropButton()
     {
-        // 丢弃选中的物品
-        ThrowItem(selectedItem.item);
-        // 移除选中的物品
-        RemoveSelectedItem();
+        // 检查选中的物品是否为空
+        if (selectedItem != null && selectedItem.item != null)
+        {
+            // 丢弃选中的物品
+            ThrowItem(selectedItem.item);
+            // 移除选中的物品
+            RemoveSelectedItem();
+        }
+        else
+        {
+            Debug.LogWarning("No item selected to drop!");
+        }
+        //// 丢弃选中的物品
+        //ThrowItem(selectedItem.item);
+        //// 移除选中的物品
+        //RemoveSelectedItem();
     }
 
     // 移除选中的物品
