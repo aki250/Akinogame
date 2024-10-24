@@ -54,10 +54,6 @@ public class PlayerLife : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth = Mathf.Max(currentHealth - amount, 0.0f);
-        //if (healthBar != null)
-        //{
-        //    healthBar.fillAmount = GetPercentage();
-        //}
 
         if (currentHealth == 0)
         {
@@ -70,10 +66,6 @@ public class PlayerLife : MonoBehaviour
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);  // 限制健康值不能超过上限
 
-        //if (healthBar != null)
-        //{
-        //    healthBar.fillAmount = GetPercentage();  // 更新血条
-        //}
     }
 
     // 获取当前健康百分比，避免除以零

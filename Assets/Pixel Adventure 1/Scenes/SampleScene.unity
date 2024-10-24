@@ -49246,7 +49246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 678640681}
-  dropPosition: {fileID: 0}
+  dropPosition: {fileID: 1638872625}
   uiSlots:
   - {fileID: 1858390877}
   - {fileID: 353660185}
@@ -55854,11 +55854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4c4d60ece49694395a029141ba4ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1686236386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3523344080586968917, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-  m_PrefabInstance: {fileID: 1706326858526340033}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1693765182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58451,65 +58446,10 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6110621380372530627, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
   m_PrefabInstance: {fileID: 1706326858526340033}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686236386}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b4c4d60ece49694395a029141ba4ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1858390878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686236386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1858390879}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1858390879 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1730418934511201773, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-  m_PrefabInstance: {fileID: 1706326858526340033}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686236386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1893050385
@@ -92553,49 +92493,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 961931421}
     m_Modifications:
-    - target: {fileID: 1437071440120965704, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_fontSize
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437071440120965704, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_margin.y
-      value: -0.27011108
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437071440120965704, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_margin.z
-      value: -0.18727875
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437071440120965704, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3523344080586968917, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
       propertyPath: m_Name
       value: Item Slots
-      objectReference: {fileID: 0}
-    - target: {fileID: 4997203002191761591, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_Name
-      value: quantity Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110621380372530627, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 1858390878}
-    - target: {fileID: 9067949572650534725, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 11.8713
-      objectReference: {fileID: 0}
-    - target: {fileID: 9067949572650534725, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 10.0653
-      objectReference: {fileID: 0}
-    - target: {fileID: 9067949572650534725, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 7.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 9067949572650534725, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -8.9279
       objectReference: {fileID: 0}
     - target: {fileID: 9199847461114703114, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
       propertyPath: m_Pivot.x
@@ -92680,10 +92580,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3523344080586968917, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1858390878}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 859c3b2d0ad5163449491e999a6edf9e, type: 3}
 --- !u!1001 &8060827109365312467
 PrefabInstance:

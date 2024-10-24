@@ -236,10 +236,6 @@ public class item_collector : MonoBehaviour
         {
             Debug.LogWarning("No item selected to drop!");
         }
-        //// 丢弃选中的物品
-        //ThrowItem(selectedItem.item);
-        //// 移除选中的物品
-        //RemoveSelectedItem();
     }
 
     // 移除选中的物品
