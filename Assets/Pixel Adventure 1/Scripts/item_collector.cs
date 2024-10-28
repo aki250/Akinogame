@@ -185,6 +185,8 @@ public class item_collector : MonoBehaviour
         selectedItemstatName.text = string.Empty;
         selectedItemsStatValue.text = string.Empty;
 
+        
+
         for (int x = 0; x < selectedItem.item.consumables.Length; x++) {
             selectedItemstatName.text += selectedItem.item.consumables[x].type.ToString() + "\n";
             selectedItemsStatValue.text += selectedItem.item.consumables[x].value.ToString() + "\n";
@@ -203,8 +205,8 @@ public class item_collector : MonoBehaviour
         selectedItem = null;
         selectedItemName.text = string.Empty;
         selectedItemDescription.text = string.Empty;
-        selectedItemName.text = string.Empty;
         selectedItemsStatValue.text = string.Empty;
+        selectedItemstatName.text = string.Empty;
         useButton.SetActive(false);
         equipButton.SetActive(false);
         unequipButton.SetActive(false);
