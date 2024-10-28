@@ -29,8 +29,6 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,7 +36,6 @@ public class PlayerLife : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 确保 healthBar 已赋值，避免空引用错误
