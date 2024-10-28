@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private BoxCollider2D coll;
 
+    private float lastAttackTime = 0f; // 上一次攻击的时间
+    private float attackRate = 0.5f; // 攻击频率（可以根据需要调整）
+
     [SerializeField] private LayerMask JumpableGround;  //添加死亡音效
 
     private float dirX = 0f;
@@ -37,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        if (Input.GetMouseButtonDown(0) && Time.time - lastAttackTime > attackRate && EquipManager.instance.currentEquip != null)
+        {
+            lastAttackTime = Time.time;
+            anim.SetTrigger("Attack");
         }
         UpdateAnimationState();
     }
@@ -73,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-                                //
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, JumpableGround);
-    }
+    } 
 }

@@ -79,6 +79,7 @@ public class PlayerLife : MonoBehaviour
     {
         rb.bodyType = RigidbodyType2D.Static;  // 设置刚体为静止
         anim.SetTrigger("death");  // 触发死亡动画
+        deathSoundEffect.Play();
 
         // 禁用 PlayerMovement 脚本，避免角色死亡后出现轻微报错
         GetComponent<PlayerMovement>().enabled = false;

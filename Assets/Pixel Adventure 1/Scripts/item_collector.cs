@@ -31,6 +31,8 @@ public class item_collector : MonoBehaviour
     // 创建一个静态实例，便于全局访问
     public static item_collector instance;
 
+    [SerializeField] private AudioSource collectSoundEffect;
+
     // 在Awake函数中初始化实例
     private void Awake()
     {
@@ -80,6 +82,7 @@ public class item_collector : MonoBehaviour
                 // 增加物品数量并更新UI
                 slotToStackTo.quantity++;
                 UpdateUI();
+                collectSoundEffect.Play();
                 return;
             }
         }
@@ -92,7 +95,9 @@ public class item_collector : MonoBehaviour
             // 如果有空槽，添加物品
             emptySlot.item = item;
             emptySlot.quantity = 1;
+
             UpdateUI();
+            collectSoundEffect.Play();
             return;
         }
 
@@ -176,6 +181,14 @@ public class item_collector : MonoBehaviour
         selectedItemName.text = selectedItem.item.displayName;
         selectedItemDescription.text = selectedItem.item.description;
 
+        selectedItemstatName.text = string.Empty;
+        selectedItemsStatValue.text = string.Empty;
+
+        for (int x = 0; x < selectedItem.item.consumables.Length; x++) {
+            selectedItemstatName.text += selectedItem.item.consumables[x].type.ToString() + "\n";
+            selectedItemsStatValue.text += selectedItem.item.consumables[x].value.ToString() + "\n";
+        }
+
         // 根据物品类型显示相应的按钮
         useButton.SetActive(selectedItem.item.type == ItemType.Consumable);
         equipButton.SetActive(selectedItem.item.type == ItemType.Equipable && !uiSlots[index].equipped);
@@ -200,25 +213,53 @@ public class item_collector : MonoBehaviour
     // 使用物品按钮点击事件
     public void ONUseButton()
     {
-
+        if(selectedItem.item.type == ItemType.Consumable)
+        {
+            for(int x = 0;x < selectedItem.item.consumables.Length; x++)
+            {
+                switch (selectedItem.item.consumables[x].type)
+                {
+                    case ConsumableType.Health: PlayerLife.instance.Heal(selectedItem.item.consumables[x].value);break;
+                   // case ConsumableType.Magic: PlayerLife.instance.Heal(selectedItem.item.consumables[x].value); break;
+                }
+            }
+        }
+        RemoveSelectedItem();
     }
 
     // 装备物品按钮点击事件
-    public void ONEquipButton()
+    public void OnEquipButton()
     {
+        if (uiSlots[currentequipIndex].equipped)
+        {
+            UnEquip(currentequipIndex);
+        }
 
+        uiSlots[selectedItemIndex].equipped = true;
+        currentequipIndex = selectedItemIndex;
+        EquipManager.instance.EquipNew(selectedItem.item);
+        UpdateUI();
+        SelectItem(selectedItemIndex);
     }
 
     // 取消装备物品
-    void UnEquip(int Index)
+    void UnEquip(int index)
     {
+        uiSlots[index].equipped = false;
+        EquipManager.instance.Unequip();
+        UpdateUI();
+
+        if (selectedItemIndex == index)
+        {
+            SelectItem(index);
+        }
 
     }
 
     // 取消装备按钮点击事件
-    public void ONUnequipButton()
+    public void OnUnequipButton()
     {
-
+        UnEquip(selectedItemIndex);
     }
 
     // 丢弃物品按钮点击事件
@@ -255,7 +296,6 @@ public class item_collector : MonoBehaviour
             // 清空物品窗口
             ClearSelectItemWindow();
         }
-
         // 更新UI
         UpdateUI();
     }
