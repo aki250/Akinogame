@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5856c463d42e24a9dd83cd31d981b5, type: 3}
   m_Name: hammer
   m_EditorClassIdentifier: 
-  displayName: Iron Sword
-  description: rubbish
+  displayName: hammer
+  description: This hammer is not bad
   type: 1
-  icon: {fileID: 21300000, guid: 719c2201c2f5f6c4aafffaeb5abdf5f9, type: 3}
-  dropPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 9895f5f95566ceb47bb239149d90cb44, type: 3}
+  dropPrefab: {fileID: 7455377272289094409, guid: a42cdafaaf9aa5e40b3a9d415ec72670, type: 3}
   canStack: 0
   maxStackAmount: 0
   consumables: []
