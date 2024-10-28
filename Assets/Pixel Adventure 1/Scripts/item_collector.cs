@@ -167,6 +167,7 @@ public class item_collector : MonoBehaviour
     // 选择物品
     public void SelectItem(int index)
     {
+        Debug.Log("Selected Item Index: " + index + ", Item: " + slots[index].item);
         // 如果选择的槽为空，直接返回
         if (slots[index].item == null)
         {
