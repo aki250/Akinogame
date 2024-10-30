@@ -78,7 +78,7 @@ public class PlayerLife : MonoBehaviour
         anim.SetTrigger("death");  // 触发死亡动画
         deathSoundEffect.Play();
 
-        // 禁用 PlayerMovement 脚本，避免角色死亡后出现轻微报错
+        // 禁用 PlayerMovement 脚本，避免角色死亡后出现报错
         GetComponent<PlayerMovement>().enabled = false;
         // 延迟重生
         Invoke(nameof(RestartLevel), respawnDelay);  // 在 respawnDelay 秒后重新加载关卡

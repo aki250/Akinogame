@@ -319,8 +319,8 @@ public class item_collector : MonoBehaviour
     public void OpenInventory()
     {
         inventoryPanel.SetActive(true);
-        // 暂停游戏时间
-        Time.timeScale = 0;
+
+        Time.timeScale = 0;        // 暂停游戏时间
         ClearSelectItemWindow();
     }
 
@@ -328,8 +328,8 @@ public class item_collector : MonoBehaviour
     public void CloseInventory()
     {
         inventoryPanel.SetActive(false);
-        // 恢复游戏时间
-        Time.timeScale = 1;
+
+        Time.timeScale = 1;        // 恢复游戏时间
     }
 }
 
